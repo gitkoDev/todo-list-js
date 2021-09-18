@@ -1,0 +1,72 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul, li {
+  list-style: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url(../img/app__bg--light.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Nunito", sans-serif;
+}
+
+.app {
+  background-color: #eee;
+  border-radius: 6px;
+  -webkit-box-shadow: 1px 2px 5px 0px #333;
+          box-shadow: 1px 2px 5px 0px #333;
+}
+.app__inner {
+  padding: 1rem;
+  width: 30vw;
+}
+.app__top {
+  margin-bottom: 2rem;
+}
+.app__title {
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #333;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.app__title-underline {
+  background: #cccccc;
+  content: "";
+  width: 100%;
+  height: 2px;
+}
+.app__list {
+  margin-bottom: 1rem;
+}
+.app__list-item {
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  color: #333;
+}
+.app__item-inner {
+  margin-bottom: 1rem;
+}
+.app__item-text {
+  display: inline-block;
+}
