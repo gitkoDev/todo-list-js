@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-do List</title>
     <link rel="stylesheet" href="style/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
 </head>
 <body>
@@ -20,24 +20,22 @@
                 </div>
                 
                 <div class="app__bottom">
-                    <ul class="app__list">
-                        <div class="app__item-inner">
-                            <li class="app__list-item">
-                                <span class="app__item-text">Feed dog</span>
+                    <ul class="app__list" id="app__list">
 
+                        <div class="app__item-container">
+                            <li class="app__item">
+                                <span class="app__item-text">Feed dog</span>
+                                <div class="app__item-btns">
                                     <button class="btn--complete btn" id="btn--complete"><i class="fas fa-check-circle"></i></button>
                                     <button class="btn--delete btn" id="btn--delete"><i class="fas fa-times-circle"></i></button>
-
+                                </div>
                             </li>
                         </div>
-
-
-                       
                     </ul>
 
                     <div class="app__input-container">
-                        <input type="text" class="app__input-text">
-                        <button class="app__add-btn">add task</button>
+                        <input type="text" class="app__input-text" placeholder="Add a new task..." id="app__input-text">
+                        <button class="app__add-btn" id="app__add-btn">add task</button>
                     </div>
 
                 </div>
@@ -45,6 +43,6 @@
         </div>
 
     </main>
-    
+    <script src="./script.js"></script>
 </body>
 </html>

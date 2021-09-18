@@ -13,6 +13,10 @@ ul, li {
     list-style: none;
 }
 
+button {
+    cursor: pointer;
+}
+
 body {
     width: 100vw;
     height: 100vh;
@@ -57,23 +61,62 @@ body {
     }
 
 // Styling list and list items
-    &__list {
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: colors.$bg-accent-light;
         margin-bottom: 1rem;
-
-        &-item {
-            margin-bottom: 0.5rem;
-            font-weight: 400;
+        padding: 0.4rem 0.8rem;
+        &-text {
+            display: inline-block;
             color: colors.$clr-primary-dark;
+            font-size: 1.5rem;
+        }
+    }
+// Styling completed and delete buttons
+    .btn {
+        font-size: 2.5rem;
+        border: none;
+        background-color: transparent;
+        &--complete {
+            color: colors.$clr-complete-btn;
+            margin-right: 0.5rem;
+        }
+        &--delete {
+            color: colors.$clr-delete-btn;
         }
     }
 
-    &__item {
-        &-inner {
-            margin-bottom: 1rem;
-        }
+// Styling input
 
-        &-text {
-            display: inline-block;
+    &__input-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__input-text {
+        border: none;
+        width: 65%;
+        padding: 0.5rem;
+        font-size: 1rem;
+        font-family: fonts.$ff-primary;
+        background-color: transparent;
+        border: 2px solid colors.$bg-accent-light;
+        outline: none;
+    }
+
+    &__add-btn {
+        background-color: colors.$clr-add-btn;
+        font-family: fonts.$ff-primary;
+        font-size: 1rem;
+        padding: 0.6rem 0.8rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        border: none;
+        transition: background-color 0.2s ease-in-out;
+        &:hover {
+            background-color: darken(colors.$clr-add-btn, 15%);
         }
     }
 
