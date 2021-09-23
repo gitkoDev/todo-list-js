@@ -49,7 +49,7 @@ body {
         font-weight: 700;
         text-transform: capitalize;
         color: colors.$clr-primary-dark;
-        font-size: 2rem;
+        font-size: 3rem;
         text-align: center;
         margin-bottom: 1rem;
         &-underline {
@@ -68,10 +68,16 @@ body {
         background: colors.$bg-accent-light;
         margin-bottom: 1rem;
         padding: 0.4rem 0.8rem;
+
+        &--completed {
+            text-decoration: line-through;
+            opacity: 50%;
+        }
         &-text {
             display: inline-block;
             color: colors.$clr-primary-dark;
             font-size: 1.5rem;
+            margin-bottom: 0.3rem;
         }
     }
 // Styling completed and delete buttons
@@ -82,9 +88,17 @@ body {
         &--complete {
             color: colors.$clr-complete-btn;
             margin-right: 0.5rem;
+            transition: transform 0.2s ease-in-out;;
+            &:hover {
+                transform: scale(1.2);
+            }
         }
         &--delete {
             color: colors.$clr-delete-btn;
+            transition: transform 0.2s ease-in-out;;
+            &:hover {
+                transform: scale(1.2);
+            }
         }
     }
 
@@ -115,9 +129,21 @@ body {
         font-weight: 500;
         border: none;
         transition: background-color 0.2s ease-in-out;
+        position: relative;
         &:hover {
-            background-color: darken(colors.$clr-add-btn, 15%);
+            background-color: darken(colors.$clr-add-btn, 10%);
         }
+    
+        
+
     }
 
 }
+
+// Styling Date under the text and buttons
+
+    .time {
+        font-size: 0.9rem;
+        color: colors.$clr-primary-dark;
+        font-weight: 400;
+    }
